@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-app-22
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: devops-app-22
+  template:
+    metadata:
+      labels:
+        app: devops-app-22
+    spec:
+      containers:
+        - name: devops-app-22-container
+          image: c0957767/assignment03-nginx:latest
+          ports:
+            - containerPort: 8085
