@@ -56,6 +56,16 @@ kubectl apply -f deployment-67.yml
 kubectl apply -f service.yml
 ```
 
+**Access the application**
+
+Run the following command to open the application in your browser:
+
+```bash
+minikube service devops-app-22
+```
+
+This will automatically open the web page
+
 3. **Verify Kubernetes objects**
 
 ```bash
@@ -73,11 +83,17 @@ kubectl get rs
 kubectl get pods -w
 ```
 
+![alt text](img1.png)
+
 - Delete a pod to see auto-healing in action:
 
 ```bash
 kubectl delete pod <pod-name>
 ```
+
+![alt text](img2.png)
+
+![alt text](img3.png)
 
 - Kubernetes automatically recreates the deleted pod to maintain 3 replicas.
 
